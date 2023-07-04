@@ -1,0 +1,28 @@
+package day_05;
+
+public class Fibonacci_Recursion {
+static int a=0,b=1,sum;
+	
+	static void fibonacci(int n) {
+		if(n>=1) {
+			sum=a+b;
+			System.out.print(" "+sum);
+			a=b;
+			b=sum;
+			
+			fibonacci (n-1);
+			
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=11;
+		System.out.print(a+" "+b);
+		fibonacci(n-2);
+		
+	}
+
+}
