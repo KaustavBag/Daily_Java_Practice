@@ -1,0 +1,29 @@
+package day_08_7thJuly;
+
+public class NumberOfStepsTill_0 {
+	
+		public static int numberOfSteps(int num) {
+			// Your code goes here
+	        int count=0;
+	        while(num>0){
+	            if(num%2==0){
+	                num=num/2;
+	                count++;
+	            }
+	            else{
+	                 num=num-1;
+	                 count++;
+	            }
+	           
+	        }
+	        return count;
+		}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(numberOfSteps(14));
+
+	}
+
+}
