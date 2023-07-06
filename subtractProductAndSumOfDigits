@@ -1,0 +1,23 @@
+package day_07_6thJuly;
+
+public class SubtractProductAndSumOfDigits {
+	public static int subtractProductAndSum(int n) {
+		// Your code goes here
+		int digits;
+		int sumOfDigits=0;
+		int prouctsOfdigits=1;
+		while(n>=1){
+			digits=n%10;
+			prouctsOfdigits*=digits;
+			sumOfDigits+=digits;
+			n=n/10;
+		}
+		return prouctsOfdigits-sumOfDigits;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(subtractProductAndSum(234));
+	}
+
+}
