@@ -1,0 +1,29 @@
+package day_08_7thJuly;
+
+public class Swap_Without_Extra_Var {
+	static void swapWithoutExtraVar(int a, int b) {
+		//Method 1 by addition & subtraction
+		/*a=a+b;
+		b=a-b;
+		a=a-b;*/
+		
+		//Method2 by multiplication and division
+	/*	a=a*b;
+		b=a/b;
+		a=a/b;
+		
+		*/
+		
+		//Method3 in one line
+		b=a*b/(a=b);
+		
+		System.out.println(a+" "+b);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		swapWithoutExtraVar(10,15);
+
+	}
+
+}
