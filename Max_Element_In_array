@@ -1,0 +1,24 @@
+package day_09_8thJuly;
+
+public class MaxNum_In_Array {
+	static int findLargestElement(int []nums) {
+        // Your code goes here
+        int maxNum=nums[0];
+
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]>maxNum){
+                maxNum=nums[i];
+            }
+           
+        }
+         return maxNum;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]= {178,512,8,0,4980,6,78,43};
+		System.out.println(findLargestElement(arr));
+
+	}
+
+}
