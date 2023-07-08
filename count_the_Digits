@@ -1,0 +1,28 @@
+package day_09_8thJuly;
+
+public class Count_the_Digits {
+	// Given an integer num, return the number of digits in num that divide num.
+	
+	static int countDigits(int num) {
+		int originalNum=num;
+		int digits;
+		int count=0;
+		while(num>=1){
+			digits=num%10;
+
+			if(originalNum%digits==0){
+				count++;
+			}
+			num=num/10;
+		}
+		return count;
+}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(countDigits(121));
+		
+
+	}
+
+}
