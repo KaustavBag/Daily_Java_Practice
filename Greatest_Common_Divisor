@@ -1,0 +1,30 @@
+package day_10_10thJuly;
+
+public class Greatest_Common_Divisor {
+	static int gCD(int a, int b) {
+		if(a>b) {
+			while(b!=0) {
+				int remainder=a%b;
+				a=b;
+				b=remainder;
+			}
+			return a;
+		}
+		else {
+			while(a!=0) {
+				int remainder=b%a;
+				b=a;
+				a=remainder;
+			}
+			return b;
+		}
+			
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(gCD(20,24));
+
+	}
+
+}
