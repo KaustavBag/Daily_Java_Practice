@@ -1,0 +1,31 @@
+package day_11_11thJuly;
+
+public class PrimeNum {
+	static boolean primeNum(int a) {
+		//int count=0;
+		if(a<2) return false;
+		
+		else {
+			for(int i=2;i*i<=a;i++) {
+				if(a%i==0) return false;
+				
+			}
+			
+		}
+		return true;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1;i<=100;i++) {
+			
+			if(primeNum(i)) {
+				System.out.print(i+" ");
+			}
+		}
+		//System.out.println(primeNum(27));
+
+	}
+
+}
