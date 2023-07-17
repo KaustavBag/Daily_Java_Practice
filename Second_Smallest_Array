@@ -1,0 +1,32 @@
+package day_12_17thJuly;
+
+public class Second_Smallest {
+	
+	public static int secondSmallest(int[] nums) {
+		// Your code goes here
+		int smallest=nums[0];
+
+		for(int i=0;i<nums.length;i++){
+			if(nums[i]<smallest) smallest=nums[i];
+		}
+
+		int second_Smallest=Integer.MAX_VALUE;
+
+		for(int i=0;i<nums.length;i++){
+			if (nums[i]==smallest) continue;
+			else if (nums[i]<=second_Smallest) second_Smallest=nums[i];
+		}
+		return second_Smallest;
+
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {1,1,5,3,4,5,7,9,3,3,5};
+		System.out.println(secondSmallest(arr));
+		
+			
+		}
+
+}
