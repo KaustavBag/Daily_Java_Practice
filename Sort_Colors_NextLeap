@@ -1,0 +1,40 @@
+package day_21_2ndAugust;
+
+import java.util.Arrays;
+
+public class Color_Sort {
+	
+	/* Given an array nums with n objects colored red, white, or blue,
+	 *  sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+	 *  We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+	You must solve this problem without using the library's sort function.*/
+	
+	static int[] sortColors(int[] arr) {
+		int i=0;
+		int index;
+		while(i<arr.length) {
+			index=i;
+			for ( int j = i+1; j < arr.length; j++) {
+				if(arr[j]<arr[index]) {
+					index=j;
+				}
+			}
+			System.out.println(i+" "+index);
+			
+			int temp=arr[i];
+			arr[i]=arr[index];
+			arr[index]=temp;
+			i++;
+			
+		}
+		return arr;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {2,0,1};
+		System.out.println(Arrays.toString(sortColors(arr)));
+
+	}
+
+}
