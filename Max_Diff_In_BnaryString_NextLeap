@@ -1,0 +1,34 @@
+package day_22_3rdAugust;
+
+public class Max_Diff_In_BnaryString {
+	/*Given a binary string s of 0's and 1's. The task is to find the maximum difference between the number of
+	 *  0s and the number of 1s (number of 0s — number of 1s) for a substring . In case of all 1s print -1.
+
+	Example 1:
+
+	Input: s = "11000010001" 
+	Output: 6*/
+	
+	static int maxDif(String str) {
+		int i,max=-1,count=0;
+		
+		for(i=0;i<str.length();i++) {
+			if(str.charAt(i)=='0') count++;
+			else count--;
+			
+			if(count<0) count=0;
+			if(count>max) max=count;
+			
+		}
+		
+		return max==0 ?-1:max;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s = "1100001000101011101011100000111111111111111000000000001";
+		System.out.println(maxDif(s));
+	}
+
+}
