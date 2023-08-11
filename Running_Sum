@@ -1,0 +1,25 @@
+package day28_11thAug;
+
+import java.util.Arrays;
+
+public class Running_sum {
+	
+	static int[] runningSum(int[] arr) {
+		int i=0,j=1;
+		
+		while(j<arr.length) {
+			arr[j]=arr[i]+arr[j];
+			i++;
+			j++;
+		}
+		return arr;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {3,1,2,10,1};
+		System.out.println(Arrays.toString(runningSum(arr)));
+
+	}
+
+}
